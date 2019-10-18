@@ -19,7 +19,7 @@ export default function App() {
   const getData = async (long, lat) => {
     const API_KEY = "84ae64078f1582569bc184c12a0343a1";
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`
     );
     const data = await response.json();
     console.log(data);
