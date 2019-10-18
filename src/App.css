@@ -2,3 +2,9 @@ body {
   height: 100%;
   background-color: #36454F;
 }
+
+.buttongroup {
+  display:flex;
+  justify-content: center;
+
+}

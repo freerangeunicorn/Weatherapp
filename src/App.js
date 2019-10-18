@@ -50,58 +50,116 @@ export default function App() {
   }
 
   return (
-    <div style={appStyle} className="container">
-      <div className="container-fluid text-white my-auto">
-        <div className="container mx-auto my-4 py-4">
-          <div className="row justify-content-center text-center">
-            <h1 className="col-12 display-4 my-2 py-3 text-dark">
-              Mai Weather App
-            </h1>
-            <h2 className="col-12">{weather && weather.name}</h2>
-            <h3 className="col-12 text-danger">
-              {weather && weather.main.temp}°C <br />
-              {weather && celsiusToF(weather.main.temp)}°F{" "}
-            </h3>
-            <h3 className="col-12 text-light">
-              <img
-                src={`https://openweathermap.org/img/wn/${weather &&
-                  weather.weather[0].icon}@2x.png`}
-                style={{ width: "50px", height: "50px" }}
-              ></img>
-              {weather && weather.weather[0].description}
-            </h3>
-            <div>
-          <ul><button type="button" onClick={()=>{getData(Cities[0].longitude,Cities[0].latitude)}}  class="btn btn-outline-light">
-          Stockholm
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[1].longitude,Cities[1].latitude)}} class="btn btn-outline-light">
-          Los Angeles
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[2].longitude,Cities[2].latitude)}}class="btn btn-outline-light">
-          Berlin
-        </button>
-        <button  type="button" onClick={()=>{getData(Cities[3].longitude,Cities[3].latitude)}} class="btn btn-outline-light">
-          Hong Kong
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[4].longitude,Cities[4].latitude)}} class="btn btn-outline-light">
-          Bali
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[5].longitude,Cities[5].latitude)}} class="btn btn-outline-light">
-          Kyiv
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[6].longitude,Cities[6].latitude)}} class="btn btn-outline-light">
-          Goa
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[7].longitude,Cities[7].latitude)}} class="btn btn-outline-light">
-          Ho Chi Minh City
-        </button>
-        <button type="button" onClick={()=>{getData(Cities[8].longitude,Cities[8].latitude)}}class="btn btn-outline-light">
-          Chiang Mai
-        </button>
-        </ul>
-        </div>
+    <div className="parentcontainer">
+      <div style={appStyle} className="container">
+        <div className="container-fluid text-white my-auto">
+          <div className="container mx-auto my-4 py-4">
+            <div className="row justify-content-center text-center">
+              <h1 className="col-12 display-4 my-2 py-3 text-dark">
+                Mai Weather App
+              </h1>
+              <h2 className="col-12">{weather && weather.name}</h2>
+              <h3 className="col-12 text-danger">
+                {weather && weather.main.temp}°C <br />
+                {weather && celsiusToF(weather.main.temp)}°F{" "}
+              </h3>
+              <h3 className="col-12 text-light">
+                <img
+                  src={`https://openweathermap.org/img/wn/${weather &&
+                    weather.weather[0].icon}@2x.png`}
+                  style={{ width: "50px", height: "50px" }}
+                ></img>
+                {weather && weather.weather[0].description}
+              </h3>
+              <div></div>
+            </div>
           </div>
         </div>
+      </div>
+      <div className="buttongroup"> 
+        <ul>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[0].longitude, Cities[0].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Stockholm
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[1].longitude, Cities[1].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Los Angeles
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[2].longitude, Cities[2].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Berlin
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[3].longitude, Cities[3].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Hong Kong
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[4].longitude, Cities[4].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Bali
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[5].longitude, Cities[5].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Kyiv
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[6].longitude, Cities[6].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Goa
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[7].longitude, Cities[7].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Ho Chi Minh City
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              getData(Cities[8].longitude, Cities[8].latitude);
+            }}
+            class="btn btn-outline-light"
+          >
+            Chiang Mai
+          </button>
+        </ul>
       </div>
     </div>
   );
