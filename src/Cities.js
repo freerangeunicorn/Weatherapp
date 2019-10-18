@@ -21,9 +21,9 @@ export const Cities = [
     longitude: 115.0920
     },
     
-    {name: 'Kyiv',
-    latitude:  30.523399,
-    longitude: 50.450100},
+    {name: 'Portland',
+    latitude:  45.523064,
+    longitude: -122.676483},
     
     {name: 'Goa',
     latitude: 15.5028,
